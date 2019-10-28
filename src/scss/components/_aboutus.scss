@@ -1,0 +1,17 @@
+.about-us {
+	
+	&__image {
+		img {
+			object-fit: cover;
+			width: 100%; height: 472px;
+			@include respond(tab-port) {
+
+				height: 300px;
+			}
+		}
+
+	}
+	&__info {
+		margin: 5.0rem 0;
+	}
+}

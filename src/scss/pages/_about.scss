@@ -1,0 +1,80 @@
+section.about-boxes {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	.item {
+		width: 50%;
+
+		@include respond(phone) {
+			width: 100%;
+		}
+	}
+
+
+	.item-txt{
+		padding: 8.0rem;
+		overflow: hidden;
+	}
+
+	@include respond(tab-port) {
+		.item-txt{
+			padding: 4rem;
+		}
+	}
+
+	@include respond(tab-land) {
+		.item-txt{
+			padding: 4rem;
+		}
+	}
+
+}
+
+.features {
+	background: rgba(234, 221, 204, 0.342);
+	&__content {
+		text-align: center;
+		&--title {
+			font-size: 2.0rem;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: $textblue;
+			padding: 1.5rem 0;
+		}
+		&--description {
+			font-size: 1.5rem;
+		}
+		&--icon {
+			transition: ease all 0.3s;
+			border-radius: 50%;
+			padding: 1rem;
+			width: 65px;
+			background: $white;
+			font-size: 27px;
+			margin: auto;
+			color: $red;
+		}
+	}
+
+		.col-md-3:hover .features__content--icon {
+			transform: scale(1.2);
+			box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+			transition: ease all 0.3s;
+		}
+	
+	.col-md-3 {
+		margin: 0 auto;
+	}
+}
+
+.what-make-us-unique {
+	padding-bottom:0;
+
+	img{
+		float: right;
+	}
+	.row {
+		align-items: center;
+	}
+}

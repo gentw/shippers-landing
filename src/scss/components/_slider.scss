@@ -1,0 +1,56 @@
+.carousel {
+	color: #ffffff;
+	&__image{
+		height: 100vh;
+		background-size: cover;
+		background-repeat: no-repeat!important;
+	}
+	&__content {
+		position: absolute;
+		z-index: 1;
+		display: flex;
+		width: 65rem;
+		height: 100%;
+		text-align: center;
+		flex-direction: column;
+		transform: translate(-50%, -50%);
+		top: 85%;
+		left: 50%; 
+		
+		&--above-title {
+			font-family: 'Source Sans Pro', serif;
+			font-size: 1.8rem;
+		}
+		
+		&--get-in-touch {		
+			margin-left: 15px;
+		}
+		.btns {
+			padding-top: 20px;
+		}
+		@include respond(tab-port) {
+			width: 40rem;
+			padding: 0 3rem;			
+		}
+	}
+
+
+
+	.carousel-indicators {
+	@include respond(tab-land) {
+		z-index:1;
+	}
+		li {
+			width: 17px;
+    		height: 17px;
+			background-color: #FFFFFF;
+			opacity: 1;
+			border-radius: 50%;
+		}
+		.active {
+			background-color: #C52031;
+		}
+
+
+	}
+}

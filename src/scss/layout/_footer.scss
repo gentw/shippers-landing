@@ -1,0 +1,72 @@
+.footer {
+	background-color: $footerbg;
+	color: $white;
+	padding: 6rem 0;
+
+
+	&__content {
+
+		@include respond(tab-port) {
+			.margin-phone {
+				margin: 20px 0;
+			}
+		}
+
+		&--description {
+			color: $white;
+			font-size: 15px;
+			padding-top: 1em;
+			width: 28.3rem;
+		}
+		&--title {
+			color: $white;
+			text-transform: capitalize;
+		}
+		&--menu {
+			height: 150px;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			li {	
+				margin-top: 5px;		
+				list-style: none;	
+				a {
+					color: $white;
+					font-size: 1.5rem;
+				}
+			}
+		}
+		.contact-us {
+			span {
+				padding-left: 10px;
+			}
+		}
+		ul.socials {
+			flex-wrap: nowrap!important;
+			flex-direction: row;
+
+			li:first-child {
+				margin-left: 2px;
+			}
+
+			li {
+				margin-left: 1.3rem;
+				position: relative;
+				i {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.margin-768 {
+			@include respond(tab-land) {
+				margin-top: 4.0rem;				
+			}
+			@include respond(tab-port) {
+				margin-top: 0;				
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+.heading-slider {
+	font-size: 5.0rem;
+	color: #FFFFFF;
+	font-weight: normal;
+	@include respond(tab-land) {
+		font-size: 3.0rem;
+	}	
+}
+
+
+
+.above-title-right-line {
+	color: $red;
+	font-size: 2.0rem;
+	text-transform: capitalize;
+	font-family: 'Source Sans Pro', serif;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom:0;
+		margin-left: 1.0rem;
+		width: 62px;
+		height: 0.5em;
+		border-top: 0.1rem solid $red;
+		
+	}
+}
+
+.above-title-left-right-line {
+	color: $red;
+	font-size: 2.0rem;
+	text-transform: capitalize;
+	font-family: 'Source Sans Pro', serif;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom:0;
+		margin-left: -7.5rem;
+		width: 62px;
+		height: 0.5em;
+		border-top: 0.1rem solid $red;
+		
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom:0;
+		margin-left: 1.0rem;
+		width: 62px;
+		height: 0.5em;
+		border-top: 0.1rem solid $red;
+		
+	}
+}
+
+.title-left-line {
+	color: $textblue;
+	font-size: 2.2rem;
+	text-transform: capitalize;
+	font-family: 'Source Sans Pro', serif;
+	position: relative;
+	margin-left: 6.5rem;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0.2rem;
+		margin-left: -6.5rem;
+		width: 45px;
+		height: 0.5em;
+		border-top: 0.2rem solid $textblue;
+		transition: ease all 0.3s;
+		
+	}
+}
+
+.heading-above-title {
+	font-size: 2.0rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	color: $red;
+}
+
+.heading-title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3.2rem;
+	font-weight: 700;
+	color: $white;
+}
+.text-primary{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: $white!important;
+}
+.title-font {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #10116E;
+}
+.text-font{
+	font-family: 'Roboto', sans-serif;
+	font-size:1.4rem;
+	font-weight: 400;
+	color: #10116E;
+}

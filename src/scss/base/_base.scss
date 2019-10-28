@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before{
+	padding: 0;
+	margin: 0;
+}
+
+
+html {
+	font-size: 62.5%; 
+
+	@include respond(tab-land){
+		font-size: 66.25%; //1rem = 9px, 9/16 = 56.25% 
+	}
+
+	@include respond(tab-port){
+		font-size: 60%; //1 rem = 8px, 8/16 = 50%
+	}
+}
+
+.main-container{
+	width:90%;
+	padding: 0 1.8em;
+	margin: 0 auto;
+}
+.main-container-80 {
+	width:80%;
+	padding: 0 1.8em;
+	margin: 0 auto;
+}
+
+
+.section-padding{
+	padding: 5rem 0;
+
+	@include respond(tab-port) {
+		padding: 3rem 0;
+	}
+}
+
+.full-width-height-img {
+	background-repeat: no-repeat!important;
+	background-size:cover!important; 
+	width: 100%; 
+	height: 90vh; 
+	position: absolute;
+	background-position: center;
+	background-attachment: fixed!important;
+
+	@include respond(tab-port) {
+		height: 500px;
+		position: relative;
+		background-position: right top!important;
+		background-attachment: scroll!important;
+	}
+}
+
+.flex-align-center {
+	display: flex;
+    align-items: center;
+}

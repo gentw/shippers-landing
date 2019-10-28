@@ -1,0 +1,36 @@
+.your-passion {
+	
+	&__content {
+		text-align: center;
+		.info{
+			padding: 15px 0 30px 0;
+		}
+		&--position-name{
+			color: $textblue;
+			font-size: 2.0rem;
+			text-transform: capitalize;
+			font-family: 'Source Sans Pro', serif;
+			margin:0;
+		}
+		&--position-remaining{
+			color: $red;
+			font-size: 1.8rem;
+			font-weight: bold;
+			font-family: 'Source Sans Pro', serif;
+		}
+
+		&--position-img {
+			border-radius: 100%;
+			transition: ease all 0.3s;
+			max-width:80%;
+			@include respond(phone) {
+				max-width: 50%;
+			}
+		}
+		&--position-img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+			transition: ease all 0.3s;
+		}
+	}
+}

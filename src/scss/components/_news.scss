@@ -1,0 +1,81 @@
+.non_bg {
+	background-color: white !important;
+}
+.latest-news {
+	background-color: #EADDCC;
+
+	&__content {
+		
+		.news--cols{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+
+		}
+		&__date {
+			width: 50px;
+			background-color: $red;
+			text-align: center;
+			font-family: 'Source Sans Pro', serif;
+			position: absolute;
+			top: -2.5rem;
+			z-index: 2;
+			left: -1.5rem;
+			&--day {
+				font-size: 2.5rem;
+				color: $white;
+				display: block;
+			}
+			
+			&--month-year {
+				font-size: 1.5rem;
+				color: $white;
+			}
+
+			@include respond(tab-land) {
+				&--day {
+					font-size: 2rem;
+				}
+				&--month-year {
+					font-size: 1.2rem;
+				}
+			}
+
+		}
+		.news-item {
+			width: 30%;
+			margin-left: auto;
+			margin-right: auto;
+			
+			position: relative;
+			margin-bottom: 10em;
+
+			@include respond(tab-port) {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 6rem;
+			}
+
+			img {
+				padding-bottom: 20px;
+				height: 300px;
+			}
+
+			h5 {
+				padding: 20px 0;
+
+			}
+
+			.btn {
+				font-size: 1.3rem;
+			}
+		}
+
+
+	}
+}
