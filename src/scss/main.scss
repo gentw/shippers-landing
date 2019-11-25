@@ -11,6 +11,13 @@
 @import 'base/typography';
 
 
+.hidden-from-tab-land {
+	@include respond(tab-land) {
+		display: none!important;
+	}
+}
+
+
 .intro {
 	height: 90vh;
 	position: relative;
@@ -20,7 +27,17 @@
 		flex-direction: column-reverse;
 		height: auto;
 	}
-	
+
+	.header {
+		display: flex;
+    	justify-content: space-between;
+
+    	.btn {
+    		height: 3.8rem;
+    		width: auto!important;
+    	}
+	}
+
 	&__wrap {
 		@include respond(tab-port) {
 			width: 100%!important;
@@ -120,22 +137,6 @@
 			  opacity: 1;
 			}
 
-			.btn{
-				background:#F1434D;
-				font-family: 'Robot', sans-serif;
-				font-size: 1.6rem;
-				font-weight: 700;
-				text-transform: capitalize;
-				height: 5rem;
-				vertical-align: top;
-				border-radius: 2px;
-				margin-left: 1rem;
-				@include respond(tab-port) {
-					margin:1rem 0 0 0;
-					width: 100%;
-				} 
-
-			}
 		}
 
 .what-we-offer{
@@ -323,34 +324,29 @@
 			padding-top: 4rem;
 			color: #fff;
 			display: flex;
-			align-items: center;
+			align-items: top;
 			justify-content: space-between;
 			font-family: 'Roboto', sans-serif;
 			font-size: 1.4rem;
-
-			&--left {
-				display: flex;
-				align-items: center;
-				.logo {
-					width: 72px;
-				}
-				.menu {
-					margin-left: 20px;
+			text-align: left;
+			flex-wrap: wrap;
+			width: 100%;
+			.menu {
 				 	li {
-						display: inline;
-						margin-left: 10px;
+						display: list-item;
+						list-style: none;
+						margin-left: 0.5rem;
+						line-height: 2.5rem;
 
-						@include respond(tab-port) {
-							margin-left: 0;
-							display: block;
-						}
 					}
+
+					
 				}
+
+			.logo {
+					width: 72px;
 			}
 
-			&--right {
-				padding-left: 1rem;
-			}
 		}
 	}
 }
@@ -367,6 +363,275 @@ a {
 
 
 @import 'components/btn'; 
+
+.about {
+	.intro {	
+		background: #10116E;
+	}
+	.full-width-height-img {
+		@include respond(tab-port) {
+			height: 400px;
+		}
+	}
+
+	.what-we-offer {
+		.quote {
+			margin-top: -50px;
+			z-index:5;
+			background: #FCD7D9; position: absolute; width: 100%; 
+			height:5rem;
+			align-items: center;
+			display: flex;
+			p {
+				margin:0;
+			}
+		}
+
+		&__content {
+			margin-top: 50px;
+
+			.heading {
+				h2 {
+					font-family: 'Roboto', sans-serif;
+					font-weight: bold;
+					font-size: 3.2rem;
+					color: #10116E;
+				}
+
+				p {
+					font-family: 'Roboto', sans-serif;
+					font-size: 1.4rem;
+					color: #000000;
+					line-height: 2.7rem;
+				}
+				margin-bottom: 5rem;
+			}
+		}
+
+		.offer {	
+			margin-left:100px;
+			margin-top: 15px;
+
+			@include respond(tab-port) {
+				margin-top: 4px;
+				margin-left: 55px;
+			}
+
+			&:before{
+				content: "";
+				width: 90px;
+				height: 90px; 
+				background-size: 90px;
+				position: absolute;
+				top: -5px;
+				left:10px; 
+				background-repeat: no-repeat;
+				@include respond(tab-port) {
+					top:0px;
+					width: 50px;
+				height: 50px;background-size: 50px;
+				}
+			}
+		}
+
+		.offer-1 {
+			&:before{
+				background-image: url("../images/11.png"); 
+
+			}
+		}
+		.offer-2 {
+			@include respond(tab-port) {
+				text-align: right;
+				margin-right: 55px;
+				margin-top: 0px;
+			}
+			
+			&:after{
+				background-image: url("../images/22.png"); 
+
+				@include respond(tab-port) {
+				content: "";
+				width: 50px;
+				height: 50px; 
+				position: absolute;
+				top: 0px; 
+				background-repeat: no-repeat;
+				background-size: 50px;
+				}
+			} 
+
+
+			&:before {				
+					@include respond(from768){
+					background-image: url("../images/33.png"); 	
+					}	
+			}
+		}
+		.offer-3 {
+			&:before{
+				background-image: url("../images/33.png"); 
+			}
+		}
+	}
+	.stuffs-on-right {
+		
+		img {
+			z-index:6;
+			position: absolute; right: 7rem; bottom: -5rem;
+			@include respond(tab-land) {
+				height: 400px;
+				right:0;
+			}
+			@include respond(tab-port) {
+				height: 500px;
+				right: 7rem;
+				bottom:-3rem;
+			}
+
+			@include respond(phone) {
+				height: auto;
+			}
+		}
+		.box-under-image{
+			background: #F1434D;
+			height: 40.7rem;
+			width: 200px;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			z-index:1;
+		}
+	}
+
+
+
+	.what-we-do {
+		width: 100%; 
+		padding: 15rem 0;
+		background-size:cover!important; 
+		.intro__wrap__heading .heading-title {
+			padding:0;
+		}
+		.btn {
+			height: auto;
+			margin:0;
+		}
+	}	
+
+	.tabify-shippers {
+		.nav {
+			margin-top: 4rem;
+			justify-content: center;
+			border:0;
+		}
+		.tabify-text-header {
+			padding: 3rem;
+		}
+		.nav-item {
+			.nav-link {
+				font-family: 'Roboto', sans-serif;
+				font-size: 16px;
+				color: #10116E;
+				border:0;
+				border-bottom: 3px solid #E2E3FD;
+				font-weight: bold;
+				padding: 0 5rem;
+
+				@include respond(phone) {
+					padding: 0 3rem;
+				}
+			}
+			.active {				
+				border-bottom: 3px solid #6E76F2;
+				color: #6E76F2;
+			}
+		}
+
+		.tab-content {
+			.box {
+				display:flex;
+				border:1px solid #E2E3FD;
+				margin-top: 20px;
+				
+				counter-increment: section;
+				
+
+				@include respond(from768) {
+						
+					
+					.box-content-2 div:nth-child(1) {
+						order: 1;
+					}
+					.box-content-4 div:nth-child(1) {
+						order: 1;
+					
+					}
+
+				}
+				
+				.box-content {
+					position: relative;
+					
+					display: flex;
+					justify-content: space-between;
+					flex-direction: row;
+					@include respond(tab-port) {
+						flex-direction: column;
+					}
+					.text {
+						padding: 50px;
+					}
+					.title {
+						
+						font-size: 22px;
+						font-family: 'Roboto', sans-serif;
+						font-weight: bold;
+						color: #10116E;
+						
+						&::before {
+							position: relative;
+							margin-left: -23px;
+							margin-top: -5px;
+							font-size: 27px;
+							content:  counter(section) " ";
+						}
+					}
+
+					.description {
+
+						color: #10116E;
+						font-size: 14px;
+						font-family: 'Roboto', sans-serif;
+						line-height: 2.7rem;
+					}
+				}
+				.box-image {
+					width: 100%;
+					height: auto;
+					background-size: cover!important;
+					position: relative;
+					background-repeat: no-repeat!important;
+					background-position: center!important;
+					display: flex;
+					@include respond(tab-port) {
+						height:200px;
+					}
+
+					
+				}
+
+				
+			}
+
+		}
+	}
+
+	footer {
+		margin-bottom: -15px;
+	}
+	
+}
 
 
 

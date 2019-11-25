@@ -7,6 +7,7 @@
 	}
 	@if $breakpoint == tab-land{
 		@media (max-width: 991px) { @content }; //1200px
+
 	}
 	@if $breakpoint == big-desktop{
 		@media (min-width: 1800px) { @content }; //1800px
