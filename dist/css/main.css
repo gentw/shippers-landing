@@ -7341,6 +7341,15 @@ html {
     html {
       font-size: 60%; } }
 
+@media (min-width: 1300px) {
+  .about-height {
+    height: 80% !important; }
+  .default-height {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; } }
+
 .main-container {
   width: 90%;
   padding: 0 1.8em;
@@ -7360,11 +7369,17 @@ html {
 .full-width-height-img {
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  width: 100%;
+  width: 96%;
   height: 90vh;
   position: absolute;
   background-position: center;
   background-attachment: fixed !important; }
+  @media (min-width: 1300px) {
+    .full-width-height-img {
+      margin-top: 49px !important;
+      z-index: 6;
+      background-attachment: initial !important;
+      background-image: url("/../src/images/last_about.jpg") !important; } }
   @media (max-width: 767px) {
     .full-width-height-img {
       height: 500px;
@@ -7496,7 +7511,8 @@ html {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 7; }
     .intro .header .btn {
       height: 3.8rem;
       width: auto !important; }
@@ -7959,6 +7975,9 @@ a {
   position: absolute;
   right: 7rem;
   bottom: -5rem; }
+  @media (min-width: 1300px) {
+    .about .stuffs-on-right img {
+      display: none; } }
   @media (max-width: 991px) {
     .about .stuffs-on-right img {
       height: 400px;

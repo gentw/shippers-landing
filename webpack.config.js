@@ -124,8 +124,8 @@ module.exports = {
 	      host: 'localhost',
 	      files: '**/*.html',
 	      injectChanges: true,
-	      port: 3002,
-	      server: { baseDir: ['C:/Users/Gex/Desktop/shippers/'] }
+	      port: 3000,
+	      server: { baseDir: ['E:/GitHub/shippers-landing'] }
 	    })
   	],
 };

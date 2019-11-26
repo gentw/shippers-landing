@@ -20,6 +20,9 @@
 	@if $breakpoint == from768{
 		@media (min-width: 768px) { @content }; //1200px
 	}
+	@if $breakpoint == from-image{
+		@media (min-width: 1300px) { @content }; //1200px
+	}
 	
 
 	

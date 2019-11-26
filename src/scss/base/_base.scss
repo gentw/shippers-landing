@@ -18,6 +18,18 @@ html {
 	}
 }
 
+@include respond(from-image){
+	.about-height{
+		height: 80% !important;
+	}
+	.default-height{
+		height: 100% !important;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: flex-end;
+	}	
+}
+
 .main-container{
 	width:90%;
 	padding: 0 1.8em;
@@ -41,11 +53,19 @@ html {
 .full-width-height-img {
 	background-repeat: no-repeat!important;
 	background-size:cover!important; 
-	width: 100%; 
+	width: 96%; 
 	height: 90vh; 
 	position: absolute;
 	background-position: center;
 	background-attachment: fixed!important;
+
+	@include respond(from-image){
+		margin-top: 49px !important;
+	    z-index: 6;
+
+		background-attachment: initial!important;
+		background-image: url('/../src/images/last_about.jpg') !important;
+	}
 
 	@include respond(tab-port) {
 		height: 500px;
