@@ -64,7 +64,7 @@ html {
 	    z-index: 6;
 
 		background-attachment: initial!important;
-		background-image: url('/../src/images/last_about.jpg') !important;
+		background-image: url('../images/last_about.jpg') !important;
 	}
 
 	@include respond(tab-port) {
